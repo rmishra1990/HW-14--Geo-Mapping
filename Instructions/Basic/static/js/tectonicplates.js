@@ -15,7 +15,7 @@ var outdoormap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.p
 // API endpoint
 var tectonicplatesLink = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_plates.json";
 
-// Grab the tectonic plates data with d3
+// Grab the data with D3
 d3.json(tectonicplatesLink, function(data) {
 
     // Define a function we want to run once for each feature in the features array
@@ -29,7 +29,7 @@ d3.json(tectonicplatesLink, function(data) {
 
     // Create a GeoJSON array containing the features array grabbed from the tectonic plates data
     // Run the onEachFeature function once for each piece of data in the array
-    var tectonicplates = L.geoJson(data, {
+    var tectonicPlates = L.geoJson(data, {
         onEachFeature: onEachFeature
     }).addTo(myMap);
 });

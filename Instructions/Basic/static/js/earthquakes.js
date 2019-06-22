@@ -4,7 +4,7 @@ var myMap = L.map("map", {
   zoom: 5
 });
 
-// Adding a tile layer (the background map image) to the map
+// Adding a tile layer to the map
 L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
   attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
   maxZoom: 18,
@@ -77,7 +77,7 @@ d3.json(link, function(data) {
     // Create a legend for the map
     var legend = L.control({position: "bottomright"});
 
-    // Legend will be called once map is displayed
+    // Legend
     legend.onAdd = function (map) {
 
       var div = L.DomUtil.create('div', 'info legend'),
